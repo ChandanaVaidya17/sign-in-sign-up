@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In/Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your external CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+          <input type="text" name="username" placeholder="Username" />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Log In</button>
+        </form>
+        <p>Not a member? <span class="toggle-button">Sign Up</span></p>
+      </div>
+      <div class="right-panel">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="POST">
+          <input type="text" name="name" placeholder="Full Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already a member? <span class="toggle-button">Login</span></p>
+      </div>
+      <div class="overlay-panel overlay-left">
+        <h2 id="overlay-heading">Welcome Back!</h2>
+        <h2 id="overlay-heading-signup" class="hidden">Create an Account</h2>
+        <p id="overlay-text">
+          To keep connected with us, please login with your personal info.
+        </p>
+        <p id="overlay-text-signup" class="hidden">
+          To join our community, please fill out the form.
+        </p>
+        <button class="ghost" id="signIn">Login</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Link to your external JavaScript file -->
+  </body>
+</html>
