@@ -10,8 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Prevent content from overflowing outside the container */
-    position: relative; /* Add relative positioning for the overlay */
+    overflow: hidden;
+    position: relative;
 }
 
 .left-panel, .right-panel {
@@ -22,16 +22,17 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.5s;
-    position: relative; /* Add relative positioning for the overlay */
+    position: relative;
+    padding: 1rem;
 }
 
 .left-panel {
-    background: linear-gradient(to right,#f4bdbd,#ab2ee5);
+    background: linear-gradient(to right, #f4bdbd, #ab2ee5);
 }
 
 .right-panel {
-    background: linear-gradient(to right,#f4bdbd,#ab2ee5);
-    overflow: hidden; /* Hide any content that might overflow */
+    background: linear-gradient(to right, #f4bdbd, #ab2ee5);
+    overflow: hidden;
 }
 
 .overlay-panel {
@@ -40,13 +41,13 @@ body {
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to left,#f4bdbd,#ab2ee5);
+    background: linear-gradient(to left, #f4bdbd, #ab2ee5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in-out; /* Updated transition duration */
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Slide left animation */
@@ -54,29 +55,18 @@ body {
     transform: translateX(0);
 }
 
-.toggle-button {
+.toggle-left,
+.toggle-right {
     cursor: pointer;
     color: blue;
-}
-
-/* Add transitions for smoother text changes */
-#overlay-heading, #overlay-text {
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.overlay-panel.slide-left #overlay-heading,
-.overlay-panel.slide-left #overlay-text {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition-delay: 0.2s;
 }
 
 /* Style the buttons for both login and sign-up */
 .overlay-left button {
     border: none;
     outline: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     background-color: transparent;
     border: 1px solid #33FF57;
     color: #33FF57;
@@ -92,4 +82,42 @@ body {
 /* Hide the elements by default */
 .hidden {
     display: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 912px) {
+
+    .left-panel, .right-panel {
+        width: 100%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the divs horizontally */
+        text-align: center; /* Center the content within the divs */
+    }
+    .left-panel{
+        display: block;
+
+    }
+    .right-panel{
+        display: none ;
+    }
+
+    .overlay-panel {
+        display: none;
+    }
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    html, body {
+        height: 100%; /* Make body fit the screen height */
+        overflow-y: auto; /* Enable vertical scrolling if content exceeds screen height */
+    }
+
+    .mobile-block {
+        display: block; /* Make the <p> tag a block element */
+    }
 }

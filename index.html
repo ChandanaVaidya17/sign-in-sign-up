@@ -10,32 +10,37 @@
   <body>
     <div class="container">
       <div class="left-panel">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
-          <input type="text" name="username" placeholder="Username" />
-          <input type="password" name="password" placeholder="Password" />
-          <button type="submit">Log In</button>
-        </form>
-        <p>Not a member? <span class="toggle-button">Sign Up</span></p>
+        <div class="center">
+          <h2>Login</h2>
+          <form action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit">Log In</button>
+          </form>
+          <p style="display: block">
+            Not a member? <span class="toggle-left">Sign Up</span>
+          </p>
+        </div>
       </div>
       <div class="right-panel">
-        <h2>Sign Up</h2>
-        <form action="signup.php" method="POST">
-          <input type="text" name="name" placeholder="Full Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
-          <button type="submit">Sign Up</button>
-        </form>
-        <p>Already a member? <span class="toggle-button">Login</span></p>
+        <div class="center">
+          <h2>Sign Up</h2>
+          <form action="signup.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit">Sign Up</button>
+          </form>
+          <p style="display: block">
+            Already a member? <span class="toggle-right">Login</span>
+          </p>
+        </div>
       </div>
       <div class="overlay-panel overlay-left">
+        <!-- Dynamic content based on JavaScript -->
         <h2 id="overlay-heading">Welcome Back!</h2>
-        <h2 id="overlay-heading-signup" class="hidden">Create an Account</h2>
         <p id="overlay-text">
           To keep connected with us, please login with your personal info.
-        </p>
-        <p id="overlay-text-signup" class="hidden">
-          To join our community, please fill out the form.
         </p>
       </div>
     </div>
