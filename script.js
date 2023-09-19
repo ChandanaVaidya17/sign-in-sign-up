@@ -15,16 +15,16 @@ toggleButtonLeft.addEventListener('click', () => {
     if (!isMobileScreen()) {
         leftPanel.classList.toggle('slide-left');
         overlayLeft.classList.toggle('slide-left');
-        overlayHeading.style.transition = 'transform 0.4s ease-in-out';
+        overlayHeading.style.transition = 'transform 0.7s ease-in-out';
         overlayHeading.style.transform =  'translateX(-250%)';
         
-        overlayText.style.transition = 'transform 0.4s ease-in-out';
+        overlayText.style.transition = 'transform 0.7s ease-in-out';
         overlayText.style.transform = 'translateX(-170%)';
         setTimeout(() => {
-            overlayHeading.style.transition = 'transform 0.4s ease-in-out';
+            overlayHeading.style.transition = 'transform 0.7s ease-in-out';
             overlayHeading.style.transform =  'translateX(0%)';
-            
-            overlayText.style.transition = 'transform 0.4s ease-in-out';
+
+            overlayText.style.transition = 'transform 0.7s ease-in-out';
             overlayText.style.transform = 'translateX(0%)';
             document.getElementById('overlay-heading').textContent = 'Create an Account';
             document.getElementById('overlay-text').textContent = 'To join our community, please fill out the form.';
@@ -41,17 +41,18 @@ toggleButtonLeft.addEventListener('click', () => {
 toggleButtonRight.addEventListener('click', () => {
     if (!isMobileScreen()) {
         overlayLeft.classList.remove('slide-left');
-        overlayHeading.style.transition = 'transform 0.4s ease-in-out';
+        overlayHeading.style.transition = 'transform 0.7s ease-in-out';
         overlayHeading.style.transform =  'translateX(250%)';
         
-        overlayText.style.transition = 'transform 0.4s ease-in-out';
+        overlayText.style.transition = 'transform 0.7s ease-in-out';
         overlayText.style.transform = 'translateX(170%)';
         setTimeout(() => {
-            overlayHeading.style.transition = 'transform 0.4s ease-in-out';
+            overlayHeading.style.transition = 'transform 0.7s ease-in-out';
             overlayHeading.style.transform =  'translateX(0%)';
-            
-            overlayText.style.transition = 'transform 0.4s ease-in-out';
+
+            overlayText.style.transition = 'transform 0.7s ease-in-out';
             overlayText.style.transform = 'translateX(0%)';
+
             document.getElementById('overlay-heading').textContent = 'Welcome Back!';
             document.getElementById('overlay-text').textContent = 'To keep connected with us, please login with your personal info.';
         }, 300);

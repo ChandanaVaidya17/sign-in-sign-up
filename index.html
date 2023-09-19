@@ -11,29 +11,29 @@
     <div class="container">
       <div class="left-panel">
         <div class="center">
-          <h2>Login</h2>
           <form action="login.php" method="POST">
+            <h2 class="legend">LOGIN</h2>
             <input type="text" name="username" placeholder="Username" />
             <input type="password" name="password" placeholder="Password" />
             <button type="submit">Log In</button>
+            <p class="mobile-block">
+              Not a member? <span class="toggle-left">Sign Up</span>
+            </p>
           </form>
-          <p style="display: block">
-            Not a member? <span class="toggle-left">Sign Up</span>
-          </p>
         </div>
       </div>
       <div class="right-panel">
         <div class="center">
-          <h2>Sign Up</h2>
           <form action="signup.php" method="POST">
+            <h2 class="legend">SIGN UP</h2>
             <input type="text" name="name" placeholder="Full Name" />
             <input type="email" name="email" placeholder="Email" />
             <input type="password" name="password" placeholder="Password" />
             <button type="submit">Sign Up</button>
+            <p class="mobile-block">
+              Already a member? <span class="toggle-right">Login</span>
+            </p>
           </form>
-          <p style="display: block">
-            Already a member? <span class="toggle-right">Login</span>
-          </p>
         </div>
       </div>
       <div class="overlay-panel overlay-left">
