@@ -9,9 +9,13 @@ Responsive sign-in/sign-up webpage with smooth transition between login and sign
 ## Features
 
 - Clean and responsive design.
+  
 - Smooth transition effect between login and sign-up views.
+  
 - Dynamic text updates for a seamless user experience.
+  
 - Easy-to-understand HTML, CSS, and JavaScript code.
+  
 - Customizable styles to suit your project's branding.
 
 ## Contributing
